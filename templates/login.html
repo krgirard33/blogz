@@ -3,23 +3,23 @@
 {% block content %}
 <h1>Login</h1>
 <form method="post">
-    <<table>
+    <table>
         <tr>
             <td><label for="username">Username</label></td>
             <td>
                 <input name="username" type="text" value="{{ username }}">
-                <span class="error">{{ errors.username_error }}</span>
+                <span class="error">{{ error.username_error }}</span>
             </td>
         </tr>
         <tr>
             <td><label for="password">Password</label></td>
             <td>
                 <input name="password" type="password" value="{{ password }}">
-                <sapn class="error">{{ errors.password_error }}</span>
+                <sapn class="error">{{ error.password_error }}</span>
             </td>
         </tr>
     </table>
-    <input name="submit">
+    <input type="submit">
 </form>
 <p>Don't have an account? <a href="/signup">Create one!</a></p>
 {% endblock %}
