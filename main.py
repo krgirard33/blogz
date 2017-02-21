@@ -137,7 +137,7 @@ class NewPostHandler(BlogHandler):
             post = Post(
                 title=title,
                 body=body,
-                author=self.user)
+                author=str(self.user))
             post.put()
 
             # get the id of the new post, so we can render the post's page (via the permalink)
